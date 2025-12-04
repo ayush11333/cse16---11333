@@ -14,6 +14,8 @@ h1 {
 
 /* Grid layout */
 .product-grid {
+  border: 2px solid blue;
+  (152, 119, 119);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -24,9 +26,11 @@ h1 {
 
 /* Product card */
 .product-card {
+  
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
+  border: 2px solid blueviolet;
   padding: 15px;
   text-align: center;
   transition: transform 0.2s;
