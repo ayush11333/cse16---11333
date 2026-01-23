@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Age Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .age-box {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 15px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    .age-box h2 {
+      margin-bottom: 15px;
+    }
+
+    .age-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .age-box button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #3b82f6;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .age-box button:hover {
+      background: #2563eb;
+    }
+
+    .result {
+      margin-top: 15px;
+      font-size: 16px;
+      background: #020617;
+      padding: 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="age-box">
+  <h2>🎂 Age Calculator</h2>
+
+  <label>Select your Date of Birth:</label>
+  <input type="date" id="dob">
+
+  <button onclick="calculateAge()">Calculate Age</button>
+
+  <div class="result" id="result">
+    Your age will appear here
+  </div>
+</div>
+
+<script>
+  function calculateAge() {
+    const dobInput = document.getElementById("dob").value;
+    const result = document.getElementById("result");
+
+    if (!dobInput) {
+      result.innerText = "Please select your date of birth.";
+      return;
+    }
+
+    const dob = new Date(dobInput);
+    const today = new Date();
+
+    let years = today.getFullYear() - dob.getFullYear();
+    let months = today.getMonth() - dob.getMonth();
+    let days = today.getDate() - dob.getDate();
+
+    if (days < 0) {
+      months--;
+      const lastMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+      days += lastMonth.getDate();
+    }
+
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+
+    result.innerHTML = `
+      🎉 You are <b>${years}</b> years,
+      <b>${months}</b> months,
+      and <b>${days}</b> days old.
+    `;
+  }
+</script>
+
+</body>
+</html>
