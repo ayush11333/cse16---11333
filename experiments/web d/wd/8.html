@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stopwatch</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .stopwatch {
+      background: #222;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    .time {
+      font-size: 40px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    .buttons button {
+      padding: 10px 15px;
+      margin: 5px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .start { background: #34c759; color: white; }
+    .stop  { background: #ff3b30; color: white; }
+    .reset { background: #007aff; color: white; }
+
+    .buttons button:hover {
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+<div class="stopwatch">
+  <div class="time" id="display">00:00:00</div>
+
+  <div class="buttons">
+    <button class="start" onclick="start()">Start</button>
+    <button class="stop" onclick="stop()">Stop</button>
+    <button class="reset" onclick="reset()">Reset</button>
+  </div>
+</div>
+
+<script>
+  let timer = null;
+  let seconds = 0;
+  let minutes = 0;
+  let hours = 0;
+
+  function updateDisplay() {
+    document.getElementById("display").innerText =
+      String(hours).padStart(2, "0") + ":" +
+      String(minutes).padStart(2, "0") + ":" +
+      String(seconds).padStart(2, "0");
+  }
+
+  function start() {
+    if (timer !== null) return;
+
+    timer = setInterval(() => {
+      seconds++;
+
+      if (seconds === 60) {
+        seconds = 0;
+        minutes++;
+      }
+      if (minutes === 60) {
+        minutes = 0;
+        hours++;
+      }
+
+      updateDisplay();
+    }, 1000);
+  }
+
+  function stop() {
+    clearInterval(timer);
+    timer = null;
+  }
+
+  function reset() {
+    stop();
+    seconds = 0;
+    minutes = 0;
+    hours = 0;
+    updateDisplay();
+  }
+
+  updateDisplay();
+</script>
+
+</body>
+</html>
