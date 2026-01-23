@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    .header {
+      background: #1e293b;
+      padding: 15px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .games-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .game-card {
+      background: #1e293b;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .game-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+
+    .game-img {
+      height: 120px;
+      background: linear-gradient(135deg, #3b82f6, #9333ea);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .game-title {
+      padding: 10px;
+      text-align: center;
+      background: #020617;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="header">🎮 Game Hub</div>
+
+  <div class="games-container">
+
+    <div class="game-card" onclick="openGame('Game 1')">
+      <div class="game-img">Game 1</div>
+      <div class="game-title">Racing Game</div>
+    </div>
+
+    <div class="game-card" onclick="openGame('Game 2')">
+      <div class="game-img">Game 2</div>
+      <div class="game-title">Shooting Game</div>
+    </div>
+
+    <div class="game-card" onclick="openGame('Game 3')">
+      <div class="game-img">Game 3</div>
+      <div class="game-title">Puzzle Game</div>
+    </div>
+
+    <div class="game-card" onclick="openGame('Game 4')">
+      <div class="game-img">Game 4</div>
+      <div class="game-title">Adventure Game</div>
+    </div>
+
+    <div class="game-card" onclick="openGame('Game 5')">
+      <div class="game-img">Game 5</div>
+      <div class="game-title">Arcade Game</div>
+    </div>
+
+    <div class="game-card" onclick="openGame('Game 6')">
+      <div class="game-img">Game 6</div>
+      <div class="game-title">Sports Game</div>
+    </div>
+
+  </div>
+
+  <script>
+    function openGame(gameName) {
+      alert("Opening " + gameName + " 🎮");
+      // Here you can redirect to real game pages:
+      // window.location.href = gameName + ".html";
+    }
+  </script>
+
+</body>
+</html>
