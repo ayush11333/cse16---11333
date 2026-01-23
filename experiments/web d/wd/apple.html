@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apple Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f5f7;
+      color: #111;
+    }
+
+    /* Header */
+    .header {
+      background: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f5f5f7;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #0071e3;
+      color: white;
+      cursor: pointer;
+    }
+
+    .hero button:hover {
+      background: #005bb5;
+    }
+
+    /* Products Section */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .product-img {
+      width: 100%;
+      height: 200px;
+      background: #ddd;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #555;
+    }
+
+    .product-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .product-price {
+      color: #0071e3;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .product-btn {
+      padding: 10px 20px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      background: #0071e3;
+      color: white;
+      cursor: pointer;
+    }
+
+    .product-btn:hover {
+      background: #005bb5;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+      color: #555;
+      background: #f5f5f7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">Apple</div>
+    <div class="nav-links">
+      <a href="#">Mac</a>
+      <a href="#">iPad</a>
+      <a href="#">iPhone</a>
+      <a href="#">Watch</a>
+      <a href="#">AirPods</a>
+      <a href="#">Support</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div>
+      <h1>iPhone 15 Pro</h1>
+      <p>Innovation meets performance. Discover the new iPhone 15 Pro today.</p>
+      <button>Buy Now</button>
+    </div>
+  </div>
+
+  <!-- Products Section -->
+  <div class="products">
+    <div class="product-card">
+      <div class="product-img">MacBook Pro</div>
+      <div class="product-name">MacBook Pro 16"</div>
+      <div class="product-price">$2499</div>
+      <button class="product-btn">Buy</button>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">iPad</div>
+      <div class="product-name">iPad Air</div>
+      <div class="product-price">$599</div>
+      <button class="product-btn">Buy</button>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">Apple Watch</div>
+      <div class="product-name">Apple Watch Series 9</div>
+      <div class="product-price">$399</div>
+      <button class="product-btn">Buy</button>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">AirPods</div>
+      <div class="product-name">AirPods Pro</div>
+      <div class="product-price">$249</div>
+      <button class="product-btn">Buy</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2026 Apple Inc. All rights reserved.
+  </div>
+
+</body>
+</html>
