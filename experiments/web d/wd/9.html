@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Twitter Clone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: white;
+    }
+
+    .main {
+      display: flex;
+      max-width: 1100px;
+      margin: auto;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      padding: 20px;
+      border-right: 1px solid #222;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 20px;
+    }
+
+    .menu-item {
+      padding: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+
+    .menu-item:hover {
+      background: #111;
+    }
+
+    .tweet-btn {
+      background: #1d9bf0;
+      border: none;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border-radius: 25px;
+      font-size: 16px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    /* Feed */
+    .feed {
+      flex: 1;
+      border-right: 1px solid #222;
+    }
+
+    .feed-header {
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 1px solid #222;
+      position: sticky;
+      top: 0;
+      background: #000;
+    }
+
+    .tweet-box {
+      padding: 15px;
+      border-bottom: 1px solid #222;
+    }
+
+    .tweet-box textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 16px;
+      resize: none;
+      outline: none;
+    }
+
+    .tweet {
+      padding: 15px;
+      border-bottom: 1px solid #222;
+    }
+
+    .tweet-user {
+      font-weight: bold;
+    }
+
+    .tweet-text {
+      margin: 8px 0;
+    }
+
+    .tweet-actions {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    /* Right panel */
+    .rightbar {
+      width: 280px;
+      padding: 20px;
+    }
+
+    .search {
+      width: 100%;
+      padding: 8px 12px;
+      border-radius: 20px;
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    .trend-box {
+      background: #111;
+      border-radius: 15px;
+      padding: 15px;
+    }
+
+    .trend {
+      padding: 8px 0;
+      border-bottom: 1px solid #222;
+    }
+
+    .trend:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="main">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>🐦</h2>
+    <div class="menu-item">🏠 Home</div>
+    <div class="menu-item">🔍 Explore</div>
+    <div class="menu-item">🔔 Notifications</div>
+    <div class="menu-item">💬 Messages</div>
+    <div class="menu-item">👤 Profile</div>
+    <button class="tweet-btn">Post</button>
+  </div>
+
+  <!-- Feed -->
+  <div class="feed">
+    <div class="feed-header">Home</div>
+
+    <div class="tweet-box">
+      <textarea rows="3" placeholder="What's happening?"></textarea>
+      <button class="tweet-btn" style="width:auto; margin-top:10px;">Post</button>
+    </div>
+
+    <div class="tweet">
+      <div class="tweet-user">Ayush Yadav @ayush</div>
+      <div class="tweet-text">This is my first tweet on my Twitter clone! 🚀</div>
+      <div class="tweet-actions">
+        <span>💬</span>
+        <span>🔁</span>
+        <span>❤️</span>
+        <span>📊</span>
+      </div>
+    </div>
+
+    <div class="tweet">
+      <div class="tweet-user">Tech News @tech</div>
+      <div class="tweet-text">New AI tools are changing the world 🤖</div>
+      <div class="tweet-actions">
+        <span>💬</span>
+        <span>🔁</span>
+        <span>❤️</span>
+        <span>📊</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Right Sidebar -->
+  <div class="rightbar">
+    <input class="search" type="text" placeholder="Search">
+    
+    <div class="trend-box">
+      <h3>Trends for you</h3>
+      <div class="trend">#WebDevelopment</div>
+      <div class="trend">#India</div>
+      <div class="trend">#AI</div>
+      <div class="trend">#Cricket</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
