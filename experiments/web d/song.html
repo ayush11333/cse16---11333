@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Song Album</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: white;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #1db954, #15803d);
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .album-cover {
+      width: 120px;
+      height: 120px;
+      background: #000;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #1db954;
+    }
+
+    .album-info h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .album-info p {
+      margin: 5px 0 0;
+      opacity: 0.9;
+    }
+
+    /* Song list */
+    .song-list {
+      padding: 20px;
+    }
+
+    .song {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      border-bottom: 1px solid #1f2933;
+      cursor: pointer;
+    }
+
+    .song:hover {
+      background: #111827;
+    }
+
+    .song-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .song-number {
+      width: 25px;
+      text-align: right;
+      opacity: 0.7;
+    }
+
+    .song-title {
+      font-weight: bold;
+    }
+
+    .song-artist {
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
+    .song-right {
+      opacity: 0.7;
+      font-size: 12px;
+    }
+
+    /* Player bar */
+    .player {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #020617;
+      border-top: 1px solid #1f2933;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .player-left {
+      font-size: 14px;
+    }
+
+    .player-controls {
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Album Header -->
+  <div class="header">
+    <div class="album-cover">ALBUM</div>
+    <div class="album-info">
+      <h1>My Favourite Songs</h1>
+      <p>Various Artists • 2026 • 10 Songs</p>
+    </div>
+  </div>
+
+  <!-- Song List -->
+  <div class="song-list">
+
+    <div class="song">
+      <div class="song-left">
+        <div class="song-number">1</div>
+        <div>
+          <div class="song-title">Song One</div>
+          <div class="song-artist">Artist Name</div>
+        </div>
+      </div>
+      <div class="song-right">3:25</div>
+    </div>
+
+    <div class="song">
+      <div class="song-left">
+        <div class="song-number">2</div>
+        <div>
+          <div class="song-title">Song Two</div>
+          <div class="song-artist">Artist Name</div>
+        </div>
+      </div>
+      <div class="song-right">4:10</div>
+    </div>
+
+    <div class="song">
+      <div class="song-left">
+        <div class="song-number">3</div>
+        <div>
+          <div class="song-title">Song Three</div>
+          <div class="song-artist">Artist Name</div>
+        </div>
+      </div>
+      <div class="song-right">2:58</div>
+    </div>
+
+    <div class="song">
+      <div class="song-left">
+        <div class="song-number">4</div>
+        <div>
+          <div class="song-title">Song Four</div>
+          <div class="song-artist">Artist Name</div>
+        </div>
+      </div>
+      <div class="song-right">3:45</div>
+    </div>
+
+  </div>
+
+  <!-- Player Bar -->
+  <div class="player">
+    <div class="player-left">
+      ▶️ Song One - Artist Name
+    </div>
+    <div class="player-controls">
+      ⏮️ ⏯️ ⏭️
+    </div>
+  </div>
+
+</body>
+</html>

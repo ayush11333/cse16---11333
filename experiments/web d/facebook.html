@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Facebook Clone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+    }
+
+    /* Header */
+    .header {
+      background: #1877f2;
+      color: white;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .search {
+      padding: 6px 10px;
+      border-radius: 20px;
+      border: none;
+      width: 200px;
+    }
+
+    /* Main layout */
+    .main {
+      display: flex;
+      max-width: 1200px;
+      margin: 20px auto;
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .sidebar div {
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .sidebar div:hover {
+      background: #f0f2f5;
+    }
+
+    /* Feed */
+    .feed {
+      flex: 1;
+    }
+
+    .post-box {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .post-box input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .post {
+      background: white;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .post-header {
+      padding: 12px;
+      font-weight: bold;
+      border-bottom: 1px solid #eee;
+    }
+
+    .post-content {
+      padding: 15px;
+      min-height: 150px;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+    }
+
+    .post-actions {
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      border-top: 1px solid #eee;
+      font-size: 14px;
+    }
+
+    .post-actions div {
+      cursor: pointer;
+    }
+
+    .post-actions div:hover {
+      color: #1877f2;
+    }
+
+    /* Right panel */
+    .rightbar {
+      width: 250px;
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .rightbar h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">facebook</div>
+    <input class="search" type="text" placeholder="Search Facebook">
+    <div>🏠 💬 🔔 👤</div>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+      <div>👤 Ayush Yadav</div>
+      <div>📰 News Feed</div>
+      <div>👥 Friends</div>
+      <div>📸 Photos</div>
+      <div>🎥 Videos</div>
+      <div>📅 Events</div>
+    </div>
+
+    <!-- Feed -->
+    <div class="feed">
+
+      <!-- Create Post -->
+      <div class="post-box">
+        <input type="text" placeholder="What's on your mind?">
+      </div>
+
+      <!-- Post 1 -->
+      <div class="post">
+        <div class="post-header">Rahul Sharma</div>
+        <div class="post-content">Post Image / Video</div>
+        <div class="post-actions">
+          <div>👍 Like</div>
+          <div>💬 Comment</div>
+          <div>↗️ Share</div>
+        </div>
+      </div>
+
+      <!-- Post 2 -->
+      <div class="post">
+        <div class="post-header">Neha Verma</div>
+        <div class="post-content">Post Image / Video</div>
+        <div class="post-actions">
+          <div>👍 Like</div>
+          <div>💬 Comment</div>
+          <div>↗️ Share</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="rightbar">
+      <h3>Contacts</h3>
+      <p>🟢 Amit</p>
+      <p>🟢 Priya</p>
+      <p>🟢 Rohit</p>
+      <p>🟢 Simran</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

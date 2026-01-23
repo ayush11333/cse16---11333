@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .qr-box {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .qr-box h2 {
+      margin-bottom: 15px;
+    }
+
+    .qr-box input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .qr-box button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      background: #405de6;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .qr-box button:hover {
+      background: #3049c9;
+    }
+
+    #qrcode {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="qr-box">
+  <h2>QR Code Generator</h2>
+  <input type="text" id="qrText" placeholder="Enter text or URL">
+  <button onclick="generateQR()">Generate QR</button>
+  <div id="qrcode"></div>
+</div>
+
+<!-- QRCode.js Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+  let qr;
+
+  function generateQR() {
+    const text = document.getElementById("qrText").value;
+    const qrContainer = document.getElementById("qrcode");
+
+    if (!text) {
+      alert("Please enter some text!");
+      return;
+    }
+
+    qrContainer.innerHTML = "";
+
+    qr = new QRCode(qrContainer, {
+      text: text,
+      width: 200,
+      height: 200
+    });
+  }
+</script>
+
+</body>
+</html>
